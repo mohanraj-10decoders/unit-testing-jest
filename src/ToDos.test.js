@@ -31,5 +31,6 @@ test('todos list', async () => {
 
   const todoList = await waitFor(() => screen.findAllByTestId('todo'));
 
-  expect(todoList).toHaveLength(3);
+  expect(todoList[0].textContent).toEqual('todo 1');
+  // expect(todoList).toHaveLength(3);
 });
